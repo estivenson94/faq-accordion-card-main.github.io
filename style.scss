@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+
+
+:root{
+--Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+--Soft-red: hsl(14, 88%, 65%);
+
+// Background gradient
+--Soft-violet: hsl(273, 75%, 66%);
+--Soft-blue: hsl(240, 73%, 65%);
+
+// Text
+--Very-dark-grayish-blue: hsl(237, 12%, 33%);
+--Dark-grayish-blue: hsl(240, 6%, 50%);
+
+// Dividers
+--Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    // font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    // font-size: 1.2rem;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%))
+}
+
+.flex{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__container{
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  background-color: var(--Light-grayish-blue);
+  border-radius: 20px;
+  justify-content: space-between;
+  min-height: 300px;
+  // z-index: -1;
+
+  &-img{
+   
+    height: 100%;
+    width: 50%;
+    // background-color: red;
+    background-image: url(../images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left -6vw center;
+    
+    
+   .pattern{
+    //  z-index: -2;
+    position: absolute;
+   }
+
+    &-box{
+    width: 40%;
+    height: 100%;
+    //  background-color: red;
+    margin-left: -6.7vw;
+    margin-top: 3.5vw;
+    background-image: url(../images/illustration-box-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center
+    }
+    
+    // }
+      // .card__container-img-box{
+      //   width: 200px;
+      //   background-color: red;
+      //   position: relative;
+      //   left: -90px;
+      //   top: 200px;
+      // }
+      
+    
+    
+  }
+
+  
+  &-faq{
+    // background-color: aqua;
+    width: 50%;
+    margin-top: 1vw;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column;
+  }
+
+  .ul__list{
+    margin-top: 30px;
+    
+    
+  }
+
+  ul{
+    font-size: 12px;
+    color: var(--Very-dark-grayish-blue);
+    // line-height: 50px;
+    padding: 20px 0;
+    width: 75%;
+    border-bottom: 1px solid var(--Dark-grayish-blue);
+    
+    
+    
+    li{
+      list-style: none;
+      position: relative;
+      cursor: pointer;
+      
+       a{
+         text-decoration: none;
+         color: black;
+        padding-right: 15px;
+        display: block;
+
+         img{
+           position: absolute;
+           right: 0;
+         }
+       }
+
+      p{
+        display: block;
+        margin-top: 10px;
+        line-height: 20px;
+        
+      }
+
+      .show{
+        
+        display:none;
+       
+
+      }
+
+    }
+    
+    a:hover{
+      color: var(--Soft-red);
+      
+    }
+  }
+  .image{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 800px){
+
+  .flex{
+    
+    align-items: flex-start;
+  }
+
+
+  .card__container{
+    flex-direction: column;
+    height: auto;
+    margin-top: 30vw;
+    padding-bottom: 40px;
+    box-shadow: 0 10px 4px  rgba(0, 0, 0, 0.4);
+    &-img{
+      height: 10%;
+      width: 80%;
+      margin: 0 auto;
+      background-image: url(../images/bg-pattern-mobile.svg);
+      background-size: contain;
+      background-position: top -2vw center;
+      
+
+      &-box{
+        display: none;
+      }
+      .image{
+        display: block;
+        position: relative;
+        top: -25vw;
+      }
+    }
+
+    &-faq{
+     
+      width: 100%;
+     
+      margin-top: -7vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 30px;
+
+      .ul__list{
+        margin-top: -10px;
+        // background-color: red;
+        width:100%;
+        
+      }
+      ul{
+        width: 100%;
+        // margin: 0 auto;
+      }
+    }
+  }
+}
